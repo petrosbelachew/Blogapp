@@ -1,13 +1,13 @@
 {
   "name": "express-mongo-crud",
-  "module": "server.cjs",
+  "module": "server.js",
   "type": "module",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "scripts": {
-    "devstart": "nodemon server.cjs"
+    "devstart": "nodemon server.js"
   },
   "peerDependencies": {
     "typescript": "^5"
