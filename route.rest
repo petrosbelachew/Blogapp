@@ -1,0 +1,33 @@
+
+
+GET http://localhost:3000/api/items/
+
+###
+
+GET http://localhost:3000/api/items/69209cded12c7bce737a3974
+
+
+###
+
+POST http://localhost:3000/api/items
+Content-Type: application/json
+
+{
+    "name": "Belay",
+    "description": "My test api"
+}
+
+###
+DELETE http://localhost:3000/api/items/69209c5c8878662925ac60e8
+
+
+###
+PUT http://localhost:3000/api/items/69209b3766a9a78ccd3e06cd
+Content-Type: application/json
+
+{
+    "name": "Belaynesh",
+    "description": "My test api"
+}
+
+

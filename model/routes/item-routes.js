@@ -1,16 +1,42 @@
 // routes/itemRoutes.js
 import express from "express";
-import "../Item.js";
+import Item from "../Item.js";
+import "../..//server.js";
 
 const router = express.Router();
 
 // 1. CREATE an Item (POST request)
 router.post("/", async (req, res) => {
   try {
+    console.log("Received Body:", req.body);
+    // FIX: Use Item.create() and pass the entire req.body
     const newItem = await Item.create(req.body);
+
     res.status(201).json(newItem);
   } catch (err) {
     res.status(400).json({ message: err.message });
+  }
+});
+
+// Read one Item
+router.get("/:id", async (req, res) => {
+  try {
+    // 1. Get the ID from the URL parameters
+    const itemId = req.params.id;
+
+    // 2. Query the database for the specific item
+    const item = await Item.findById(itemId);
+
+    // Handle case where no item is found
+    if (!item) {
+      return res.status(404).json({ message: "Item not found" });
+    }
+
+    // 3. Return the single item
+    res.json(item);
+  } catch (err) {
+    // Handle errors like invalid ID format
+    res.status(500).json({ message: err.message });
   }
 });
 
