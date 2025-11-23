@@ -8,8 +8,11 @@ app.use(express.json());
 
 //import itemRoutes from "./model/routes/item-routes.js";
 import blogRoutes from "./model/routes/blog-routes.js";
+import writerRoutes from "./model/routes/writer-routes.js";
 
 app.use("/api/blog", blogRoutes); // All routes in itemRoutes will be prefixed with /api/items
+app.use("/api/writer", writerRoutes); // All routes in itemRoutes will be prefixed with /api/items
+
 //Connect to MongoDB
 const PORT = process.env.port || 3000;
 mongoose

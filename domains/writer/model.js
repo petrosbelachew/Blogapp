@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 const writerSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -7,7 +8,10 @@ const writerSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  profession: String,
+  profession: {
+    type: String,
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

@@ -33,3 +33,20 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/blog/
+
+###
+
+POST http://localhost:3000/api/blog 
+Content-Type: application/json
+
+{
+    "title": "A Guide to API Development", 
+    "description": "A quick summary of the steps involved in building a simple API with Express and MongoDB.",
+    "content": "This is the full, detailed content of the blog post, discussing routing, services, models, and Mongoose validation."
+    // If you include 'writer', it must also be in double quotes: "writer": "..."
+}
+###
+
+GET http://localhost:3000/api/writer/
+
+
