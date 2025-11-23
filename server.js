@@ -6,7 +6,7 @@ import { appview } from "./src/app.js";
 
 // Main express app setups
 appview();
-//Connect to MongoDB
 
+//Connect to MongoDB
 // db connection funcion call
 dbConnection();
