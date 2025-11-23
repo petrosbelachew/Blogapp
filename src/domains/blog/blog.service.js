@@ -1,4 +1,4 @@
-import blogModel from "../blog/model.js";
+import blogModel from "./blog.model.js";
 
 class BlogService {
   async createBlog(data) {

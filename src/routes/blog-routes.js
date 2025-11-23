@@ -1,7 +1,7 @@
 import express from "express";
 
 const router = express.Router();
-import blogController from "../../domains/blog/controller.js";
+import blogController from "../domains/blog/blog.controller.js";
 const BlogController = new blogController();
 
 router.post("/", BlogController.create);

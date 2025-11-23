@@ -1,7 +1,7 @@
 // routes/itemRoutes.js
 import express from "express";
-import Item from "../Item.js";
-import "../..//server.js";
+import Item from "../../../model/Item.js";
+import "../../../server.js";
 
 const router = express.Router();
 
@@ -51,7 +51,7 @@ router.get("/", async (req, res) => {
 });
 
 // 3. UPDATE an Item (PUT request) - Example for a single item by ID
-// You would typically use middleware to find the item first, but keeping it simple:
+
 router.put("/:id", async (req, res) => {
   try {
     const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {

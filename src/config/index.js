@@ -1,0 +1,4 @@
+import "dotenv/config";
+
+export const PORT = process.env.port || 3000;
+export const url = process.env.mongourl;

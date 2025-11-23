@@ -1,4 +1,4 @@
-import WriterService from "../writer/service.js";
+import WriterService from "./service.js";
 
 const writerService = new WriterService();
 class writerController {

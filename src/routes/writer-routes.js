@@ -1,7 +1,7 @@
 import express from "express";
 
 const router = express.Router();
-import writerController from "../../domains/writer/controller.js";
+import writerController from "../domains/writer/controller.js";
 const WriterController = new writerController();
 
 router.post("/", WriterController.create);

@@ -1,4 +1,4 @@
-import BlogService from "../blog/service.js";
+import BlogService from "./blog.service.js";
 
 const blogService = new BlogService();
 class BlogController {

@@ -50,3 +50,12 @@ Content-Type: application/json
 GET http://localhost:3000/api/writer/
 
 
+###
+POST http://localhost:3000/api/writer/
+Content-Type: application/json
+
+{
+    "name": "Petros",
+    "age":"34",
+    "profession": "Dev"
+}
