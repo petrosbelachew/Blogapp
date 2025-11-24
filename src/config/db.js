@@ -6,12 +6,22 @@ export function dbConnection() {
   mongoose
     .connect(url)
     .then(() => {
-      console.log("✅ Connected to MongoDB");
-      app.listen(PORT, () => {
-        console.log(`🚀 Servr is running on http://localhost:${PORT}`);
+      console.log("✅ MongoDB connected successfully!");
+
+      // Start the Express server only after the DB connection is successful
+      const server = app.listen(PORT, () => {
+        console.log(`Server running and listening on port ${PORT}`);
+      });
+
+      // Add robust error handling for the server listening process itself
+      server.on("error", (err) => {
+        console.error("❌ Server Listen Error:", err.message);
+        process.exit(1);
       });
     })
-    .catch((error) => {
-      console.error("❌ MongoDB connection error:", error);
+    .catch((err) => {
+      console.error("❌ MongoDB connection error:", err.message);
+      // Exit process if DB connection fails
+      process.exit(1);
     });
 }

@@ -59,3 +59,18 @@ Content-Type: application/json
     "age":"34",
     "profession": "Dev"
 }
+
+###
+
+POST http://localhost:3000/api/blog 
+Content-Type: application/json
+
+{
+    "title": "My API Post",
+    "description": "This is descrptn",
+    "content": "...",
+    "writer": {
+        "name": "Jane Doe",
+        "email": "jane@example.com"
+    } 
+}
