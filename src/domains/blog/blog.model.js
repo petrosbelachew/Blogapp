@@ -24,7 +24,11 @@ const blogSchema = new mongoose.Schema(
     },
     writer: {
       type: mongoose.Schema.Types.ObjectId,
+<<<<<<< HEAD
       ref: "writer",
+=======
+      ref: "Writer",
+>>>>>>> 9d0d8a3db1060b914e2c52c56d4655453531892a
     },
   },
   {
